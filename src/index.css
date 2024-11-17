@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.dark {
+  @apply bg-gray-900 text-white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400/50 rounded-full hover:bg-gray-400/70 transition-colors;
+}
+
+/* Range input styling */
+input[type="range"] {
+  @apply h-1 rounded-lg appearance-none cursor-pointer;
+}
+
+.dark input[type="range"] {
+  @apply bg-gray-700;
+}
+
+input[type="range"] {
+  @apply bg-gray-300;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply appearance-none w-3 h-3 rounded-full bg-white hover:bg-blue-50 transition-colors;
+}
+
+/* Window animations */
+.window-handle {
+  @apply cursor-move select-none;
+}
+
+/* Glass morphism effects */
+.glass {
+  @apply bg-white/10 backdrop-blur-md border border-white/20;
+}
+
+.dark .glass {
+  @apply bg-black/30 border-white/10;
+}
+
+/* Button hover effects */
+.btn-hover {
+  @apply transition-all duration-200 hover:scale-105 active:scale-95;
+}
+
+/* Window transitions */
+.window-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .rnd-handle {
+    display: none;
+  }
+  
+  input[type="range"] {
+    @apply h-2;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    @apply w-4 h-4;
+  }
+  
+  .mobile-full {
+    @apply w-full h-full !important;
+  }
+}
+
+/* Theme-specific text colors */
+.dark .text-theme {
+  @apply text-white;
+}
+
+.text-theme {
+  @apply text-gray-800;
+}
+
+/* Interactive elements */
+.interactive {
+  @apply transform transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer;
+}
+
+/* Card effects */
+.card {
+  @apply rounded-xl shadow-lg overflow-hidden;
+}
+
+.dark .card {
+  @apply bg-gray-800 border-gray-700;
+}
+
+.card {
+  @apply bg-white border border-gray-200;
+}
