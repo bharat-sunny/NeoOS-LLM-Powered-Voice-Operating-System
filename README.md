@@ -109,5 +109,3 @@ MIT License - feel free to use this project for personal or commercial purposes.
 - Open Source Community
 
 ---
-
-Built with ❤️ using modern web technologies. For more information, visit our [documentation](https://github.com/yourusername/neo-os/wiki).
